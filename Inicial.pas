@@ -9,15 +9,14 @@ uses {bibliotecas}
 
 type
   TCad_Usu = class(TForm)
+    lb_titulo: TLabel;
+    txt_valor2: TEdit;
+    txt_total: TEdit;
     Label1: TLabel;
-    btn_salvar: TButton;
-    btn_deletar: TButton;
-    btn_editar: TButton;
-    txt_nome: TEdit;
-    txt_nome2: TEdit;
-    txt_nome3: TEdit;
-    procedure btn_salvarClick(Sender: TObject);
-    procedure btn_deletarClick(Sender: TObject);
+    Label2: TLabel;
+    txt_valor1: TEdit;
+    btn_calcular: TButton;
+    procedure btn_calcularClick(Sender: TObject);
   private
     var nome, sobrenome, endereco:string;
     { Private declarations }
@@ -32,27 +31,14 @@ implementation
 
 {$R *.dfm}
 
-procedure TCad_Usu.btn_deletarClick(Sender: TObject);
+procedure TCad_Usu.btn_calcularClick(Sender: TObject);
+  var vlr1, vlr2, total : integer;
 begin
-  nome:= '';
-  sobrenome := '';
-  endereco := '';
+  vlr1 := strToInt(txt_valor1.Text);
+  vlr2 := strToInt(txt_valor2.Text);
 
-  txt_nome.Text := nome;
-  txt_nome2.Text := sobrenome;
-  txt_nome3.Text := endereco;
-end;
-
-procedure TCad_Usu.btn_salvarClick(Sender: TObject);
-
-begin
-  nome:= 'Ives Yuh';
-  sobrenome := 'Kondo';
-  endereco := 'Teste endereco';
-
-  txt_nome.Text := nome;
-  txt_nome2.Text := sobrenome;
-  txt_nome3.Text := endereco;
+  total := vlr1 + vlr2;
+  txt_total.Text :=  intToStr(total);
 end;
 
 end.

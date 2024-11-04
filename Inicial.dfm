@@ -3,8 +3,8 @@ object Cad_Usu: TCad_Usu
   Top = 0
   Cursor = crHandPoint
   Caption = 'Tela Inicial'
-  ClientHeight = 379
-  ClientWidth = 583
+  ClientHeight = 426
+  ClientWidth = 648
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,61 +13,59 @@ object Cad_Usu: TCad_Usu
   Font.Style = []
   Position = poDesktopCenter
   TextHeight = 15
-  object Label1: TLabel
-    Left = 21
+  object lb_titulo: TLabel
+    Left = 140
     Top = 14
-    Width = 111
+    Width = 63
     Height = 15
-    Caption = 'Cadastro de Usu'#225'rios'
+    Caption = 'Calculadora'
   end
-  object btn_salvar: TButton
-    Left = 21
-    Top = 35
-    Width = 75
+  object Label1: TLabel
+    Left = 246
+    Top = 52
+    Width = 32
+    Height = 15
+    Caption = 'Valor I'
+  end
+  object Label2: TLabel
+    Left = 246
+    Top = 91
+    Width = 35
+    Height = 15
+    Caption = 'Valor II'
+  end
+  object txt_valor2: TEdit
+    Left = 119
+    Top = 88
+    Width = 121
     Height = 25
-    Cursor = crHandPoint
-    Caption = 'Salvar'
+    NumbersOnly = True
     TabOrder = 0
-    OnClick = btn_salvarClick
   end
-  object btn_deletar: TButton
-    Left = 21
-    Top = 66
-    Width = 75
-    Height = 25
-    Cursor = crHandPoint
-    Caption = 'Deletar'
+  object txt_total: TEdit
+    Left = 119
+    Top = 131
+    Width = 121
+    Height = 24
+    NumbersOnly = True
     TabOrder = 1
-    OnClick = btn_deletarClick
   end
-  object btn_editar: TButton
-    Left = 21
-    Top = 97
-    Width = 75
-    Height = 25
-    Cursor = crHandPoint
-    Caption = 'Editar'
+  object txt_valor1: TEdit
+    Left = 119
+    Top = 49
+    Width = 121
+    Height = 24
+    NumbersOnly = True
     TabOrder = 2
   end
-  object txt_nome: TEdit
-    Left = 119
-    Top = 35
-    Width = 121
-    Height = 23
+  object btn_calcular: TButton
+    Left = 246
+    Top = 130
+    Width = 75
+    Height = 25
+    Cursor = crHandPoint
+    Caption = 'Total'
     TabOrder = 3
-  end
-  object txt_nome2: TEdit
-    Left = 119
-    Top = 67
-    Width = 121
-    Height = 23
-    TabOrder = 4
-  end
-  object txt_nome3: TEdit
-    Left = 119
-    Top = 96
-    Width = 121
-    Height = 23
-    TabOrder = 5
+    OnClick = btn_calcularClick
   end
 end
