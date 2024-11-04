@@ -17,8 +17,9 @@ type
     txt_nome2: TEdit;
     txt_nome3: TEdit;
     procedure btn_salvarClick(Sender: TObject);
+    procedure btn_deletarClick(Sender: TObject);
   private
-    var nome:string;
+    var nome, sobrenome, endereco:string;
     { Private declarations }
   public
     { Public declarations }
@@ -31,12 +32,27 @@ implementation
 
 {$R *.dfm}
 
-procedure TCad_Usu.btn_salvarClick(Sender: TObject);
+procedure TCad_Usu.btn_deletarClick(Sender: TObject);
 begin
-  var nome:= 'Ives Yuh';
+  nome:= '';
+  sobrenome := '';
+  endereco := '';
+
   txt_nome.Text := nome;
-  txt_nome2.Text := nome;
-  txt_nome3.Text := nome;
+  txt_nome2.Text := sobrenome;
+  txt_nome3.Text := endereco;
+end;
+
+procedure TCad_Usu.btn_salvarClick(Sender: TObject);
+
+begin
+  nome:= 'Ives Yuh';
+  sobrenome := 'Kondo';
+  endereco := 'Teste endereco';
+
+  txt_nome.Text := nome;
+  txt_nome2.Text := sobrenome;
+  txt_nome3.Text := endereco;
 end;
 
 end.

@@ -38,6 +38,7 @@ object Cad_Usu: TCad_Usu
     Cursor = crHandPoint
     Caption = 'Deletar'
     TabOrder = 1
+    OnClick = btn_deletarClick
   end
   object btn_editar: TButton
     Left = 21
